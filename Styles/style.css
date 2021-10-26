@@ -1,17 +1,22 @@
 * {
-  flex-direction: column;
-  align-items: center;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+nav{
+  top: 0;
+  width:100%;
+}
+
 body {
+    flex-direction: column;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
+
 
   #message-container {
     width: 80%;
@@ -43,8 +48,16 @@ body {
   }
 
   section{
-    padding: 5% 5%;
-    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 1%;
+    margin: 1%;
+  }
+
+  .chat-container{
+    width:50%;
+    height:auto;
   }
 
   
