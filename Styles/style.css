@@ -17,23 +17,18 @@ body {
     align-items: center;
   }
 
-
   #message-container {
     width: 80%;
     max-width: 1200px;
   }
-
   #message-container div {
     background-color: #CCC;
     padding: 5px;
   }
-
   #message-container div:nth-child(2n) {
     background-color: #FFF;
   }
-
   #send-container {
-    flex-direction: row;
     position: fixed;
     padding-bottom: 30px;
     bottom: 0;
@@ -42,7 +37,6 @@ body {
     width: 80%;
     display: flex;
   }
-
   #message-input {
     flex-grow: 1;
   }
