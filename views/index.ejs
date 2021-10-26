@@ -45,12 +45,14 @@
     </div>
   </nav>
   <div id="room-container">
+    <h3>Rooms Available</h3>
     <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
-      <a href="/<%= room %>">Join</a>
+      <div><%= room %>: <a href="/<%= room %>">Join</a></div>
+      
     <% }) %>
   </div>
   <form action="/room" method="POST">
+    <h3>Create Room</h3>
     <input name="room" type="text" required>
     <button type="submit">New Room</button>
   </form>
