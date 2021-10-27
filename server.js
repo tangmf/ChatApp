@@ -11,8 +11,13 @@ app.use(express.urlencoded({ extended: true }))
 const rooms = { }
 
 app.get('/', (req, res) => {
-  res.render('index', { rooms: rooms })
+  res.render('index')
 })
+
+app.get('/search', (req, res) => {
+  res.render('search', { rooms: rooms })
+})
+
 
 app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
