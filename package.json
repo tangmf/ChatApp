@@ -1,17 +1,31 @@
 {
-    "name": "current-project",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "devStart": "nodemon server.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "socket.io": "^2.2.0"
-    },
-    "devDependencies": {
-      "nodemon": "^1.19.0"
-    }
-  }
+  "name": "current-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^2.6.2",
+    "@types/node": "^11.9.4",
+    "ejs": "^2.6.1",
+    "typescript": "^3.3.3333",
+    "nodemon": "^1.19.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangmf/ChatApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tangmf/ChatApp/issues"
+  },
+  "homepage": "https://github.com/tangmf/ChatApp#readme"
+}
