@@ -20,6 +20,9 @@
     "typescript": "^3.3.3333",
     "nodemon": "^1.19.4"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tangmf/ChatApp.git"
