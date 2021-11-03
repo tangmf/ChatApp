@@ -19,8 +19,8 @@ app.get('/search', (req, res) => {
   res.render('search', { rooms: rooms })
 })
 
-app.get('/forums', (req, res) => {
-  res.render('forums')
+app.get('/blog', (req, res) => {
+  res.render('blog')
 })
 
 app.get('/about', (req, res) => {
