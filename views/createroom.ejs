@@ -56,16 +56,13 @@
 
     </div>
   </nav>
-  <div id="room-container">
-    <h3>Rooms Available</h3>
-    <% Object.keys(rooms).forEach(room=> { %>
-      <div>
-        <%= room %>: <a href="/<%= room %>">Join</a>
-      </div>
 
-      <% }) %>
-  </div>
-  <a href="/createroom">Create Room</a>
+  <form action="/room" method="POST">
+    <h3>Create Room</h3>
+    <input name="room" type="text" required>
+    <button type="submit">New Room</button>
+  </form>
+
   <footer class="container">
     <hr>
     <p class="float-right"><a href="#">Back to top</a></p>

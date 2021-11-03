@@ -19,6 +19,10 @@ app.get('/search', (req, res) => {
   res.render('search', { rooms: rooms })
 })
 
+app.get('/createroom', (req, res) => {
+  res.render('createroom', { rooms: rooms })
+})
+
 app.get('/blog', (req, res) => {
   res.render('blog')
 })
