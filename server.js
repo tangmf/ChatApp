@@ -27,6 +27,7 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 
+app.use(express.static("images"));
 
 app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
