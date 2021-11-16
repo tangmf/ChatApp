@@ -51,14 +51,28 @@ app.get('/:room', (req, res) => {
 })
 
 server.listen(port)
-
+const history = []
+const client = []
 io.on('connection', socket => {
+  client.push({id : socket.client.id})
+  console.log(client)
+
+var getClientID = client.find(e => (e.id === socket.client.id))
+ console.log("the Client", getClientID)
+ if(getClientID){
+  //io.sockets.emit("msg",history);
+  socket.emit("msg",history)
+  console.log(history)
+ }
   socket.on('new-user', (room, name) => {
     socket.join(room)
     rooms[room].users[socket.id] = name
     socket.to(room).broadcast.emit('user-connected', name)
   })
-  socket.on('send-chat-message', (room, message) => {
+  socket.on('send-chat-message', (room, message, name) => {
+    messagearray = [name, message]
+    history.push(messagearray)
+    console.log(history)
     socket.to(room).broadcast.emit('chat-message', { message: message, name: rooms[room].users[socket.id] })
   })
   socket.on('disconnect', () => {

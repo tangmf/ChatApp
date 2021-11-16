@@ -13,7 +13,7 @@ if (messageForm != null) {
     e.preventDefault()
     const message = messageInput.value
     appendMessage(`You: ${message}`)
-    socket.emit('send-chat-message', roomName, message)
+    socket.emit('send-chat-message', roomName, message, name)
     messageInput.value = ''
   })
 }
@@ -30,6 +30,13 @@ socket.on('room-created', room => {
 
 socket.on('chat-message', data => {
   appendMessage(`${data.name}: ${data.message}`)
+})
+
+socket.on('msg', data => {
+  console.log("Recieved client history: " + data)
+  data.forEach(element => {
+    appendMessage(`${element[0]}: ${element[1]}`)
+  })
 })
 
 socket.on('user-connected', name => {
