@@ -6,7 +6,6 @@ const messageInput = document.getElementById('message-input')
 
 if (messageForm != null) {
   const name = prompt('What is your name?')
-  appendMessage('You joined')
   socket.emit('new-user', roomName, name)
 
   messageForm.addEventListener('submit', e => {
@@ -37,6 +36,7 @@ socket.on('msg', data => {
   data.forEach(element => {
     appendMessage(`${element[0]}: ${element[1]}`)
   })
+  appendMessage('You joined')
 })
 
 socket.on('user-connected', name => {
