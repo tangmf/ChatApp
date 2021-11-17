@@ -223,4 +223,101 @@ body {
     }
   }
 
-  
+ /* about.ejs  */
+.container{
+  position: relative;
+  width: 1000px;
+  height:600px;
+  margin: 100px auto;
+  /* background-color: #018957; */
+}
+
+.container .box{
+  position: relative;
+  width: calc(500px - 45px);
+  height: calc(300px - 30px);
+  float:left;
+  background-color: rgb(225, 245, 179);
+  margin:15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.container .box .icon{
+  position: absolute;
+  top : 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.container .box:hover .icon{
+  top: 20px;
+  background-color:#018957;
+  left:calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.container .box .icon .fa{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition:0.5s;
+  /* color:#fff; */
+}
+.container .box:hover .icon .fa{
+  font-size: 40px;
+}
+
+.container .box .content{
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 80px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box:hover .content{
+  top: 100px;
+  opacity: 1;
+}
+
+.container .box .content h3{
+  margin: 0 0 10px;
+  padding: 0;
+  color: rgb(3, 3, 3);
+}
+.container .box .content p{
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+.container .box:nth-child(1).icon{
+  background: #018957;
+}
+.container .box:nth-child(1){
+  background: rgb(225, 245, 179);
+}
+
+.container .box:nth-child(2).icon{
+  background: #018957;
+}
+.container .box:nth-child(2){
+  background: rgb(225, 245, 179);
+}
+.container .box:nth-child(3).icon{
+  background: #018957;
+}
+.container .box:nth-child(3){
+  background: rgb(225, 245, 179);
+}

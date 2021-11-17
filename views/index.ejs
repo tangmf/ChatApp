@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="chat-style.css">
   <title>ChatApp</title>
 </head>
 
@@ -46,7 +46,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
-
+        
       </ul>
 
     </div>
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="chatbox__button">
-        <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        <button><img src="/chatbot/static/images/chatbox-icon.svg" /></button>
       </div>
     </div>
   </div>
@@ -131,11 +131,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 -->
+  <script src="/chatbot/front-end/app.js"></script>
 
-  <script>
-    $SCRIPT_ROOT = {{ request.script_root | tojson }};
-  </script>
-  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
 
 </body>
 
