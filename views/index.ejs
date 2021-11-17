@@ -16,15 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>ChatApp</title>
-  <style>
-    * {
-      font-family: 'Architects Daughter', cursive;
-    }
-
-    .navbar-custom {
-      background-color: #018957;
-    }
-  </style>
 </head>
 
 <body>
@@ -49,6 +40,9 @@
           <a class="nav-link" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/quiz">Quiz</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
 
@@ -71,7 +65,7 @@
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-          <img src="/chatroom.png" alt="Rooms" width="140" height="140">
+          <img src="/Images/chatroom.png" alt="Rooms" width="140" height="140">
           <h2>Chat room</h2>
           <p></p>
           <p><a class="btn btn-secondary" href="/search" role="button">Head over here to create a room »</a></p>
