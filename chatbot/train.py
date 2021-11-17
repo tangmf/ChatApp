@@ -8,9 +8,13 @@ from torch.utils.data import Dataset, DataLoader
 
 from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
+import os
+os.getcwd
 
-with open('/chatbot/intents.json', 'r') as f:
-    intents = json.load(f)
+#with open('/chatbot/intents.json', 'r') as f:
+#    intents = json.load(f)
+f = open('chatbot/intents.json','r')
+intents = json.load(f)
 
 all_words = []
 tags = []
