@@ -109,12 +109,12 @@ let questions = [
 ];
 
 const SCORE_POINTS = 100; //points for question correct
-const HEALTH_POINTS = 2; //Damage done to covid enemy for question correct
+// const HEALTH_POINTS = 2; //Damage done to covid enemy for question correct
 const MAX_QUESTIONS = 10;
-var health = 20; //covid enemy total health
+// var health = 20; //covid enemy total health
 var startGame;
 var getNewQuestion;
-var decrementHealth;
+// var decrementHealth;
 var incrementScore;
 
 startGame = () => {
@@ -166,9 +166,9 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         if(classToApply === 'correct') {
-            // correct answer to question (enemy take damage, score increases)
-            decrementHealth(HEALTH_POINTS);
-            healthBarFull.style.width = `${(health/20) * 100}%`; // update hp bar for enemy
+            // // correct answer to question (enemy take damage, score increases)
+            // decrementHealth(HEALTH_POINTS);
+            // healthBarFull.style.width = `${(health/20) * 100}%`; // update hp bar for enemy
             incrementScore(SCORE_POINTS);
         }
         
@@ -183,12 +183,12 @@ choices.forEach(choice => {
 
     });
 });
-decrementHealth = num => {
+// decrementHealth = num => {
     
-    health -= num;
-    healthText.innerText = `COVID HP: ${health}/20`;
+//     health -= num;
+//     healthText.innerText = `COVID HP: ${health}/20`;
 
-};
+// };
 incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
