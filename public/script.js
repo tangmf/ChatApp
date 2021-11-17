@@ -14,6 +14,8 @@ if (messageForm != null) {
     appendMessage(`You: ${message}`)
     socket.emit('send-chat-message', roomName, message, name)
     messageInput.value = ''
+    e.target.elements.msg.value = ''
+    e.target.elements.msg.focus()
   })
 }
 
@@ -29,6 +31,7 @@ socket.on('room-created', room => {
 
 socket.on('chat-message', data => {
   appendMessage(`${data.name}: ${data.message}`)
+  messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
 socket.on('msg', data => {
