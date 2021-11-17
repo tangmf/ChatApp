@@ -1,0 +1,129 @@
+*{
+    font-size: 10px;
+}
+
+/* container used to hold the questions */
+.choice-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(18,93,255);
+    font-size: 3rem;
+    min-width: 80rem;;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6,103,247,0.5);
+    transform:  scale(1.02);
+    transform: 100ms;
+}
+
+/* questions section */
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color:white;
+    font-size: 1.5rem;
+}
+
+.choice-text{
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+/* when choice is correct or incorrect */
+
+.correct{
+    background: linear-gradient(32deg, rgba(11,223,36) 0%, rgba(41,232,111) 100%);
+}
+
+.incorrect{
+    background: linear-gradient(32deg, rgba(230,29, 29, 1) 0%, rgba(224, 11, 11, 1) 100%);
+}
+
+/* heads up display */
+
+#hud{
+    display:flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text{
+    text-align: center;
+}
+
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: rgb(11,223, 36);
+    width: 0%;
+}
+
+#healthBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgba(230,29, 29, 1);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#healthBarFull{
+    height: 100%;
+    background: rgba(230,29, 29, 1);
+    width: 100%;
+}
+
+#exit_btn{
+    margin: 3%;
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+#exit_btn:hover{
+    color:red;
+}
+
+/* responsive */
+
+@media screen and (max-width: 800px){
+    #game{
+        width: 80%;
+    }
+
+    #hud{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #question{
+        font-size: 20px;
+    }
+    .choice-container{
+        width: 100%;
+        font-size: 20px;
+        min-width: 100%;
+    }
+    .choice-text{
+        width: 100%;
+        font-size: 15px;
+    }
+}
