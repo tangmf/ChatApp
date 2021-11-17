@@ -25,7 +25,7 @@
 <body>
   <!-- Nav bar -->
   <nav style="position: sticky;z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-dark">
-    <a class="navbar-brand" href="index.html"><img src="" alt="icon" style="width:60px;"> Chatapp</a>
+    <a class="navbar-brand" href="index.html"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -54,13 +54,34 @@
 
 
   <section class="chat-container">
-    <h2 class='page-title'>Chat room: <%= roomName %>
-    </h2>
-    <div id="message-container"></div>
-    <form id="send-container">
-      <input type="text" id="message-input">
-      <button type="submit" id="send-button">Send</button>
-    </form>
+      <header class="chat-header">
+        <h1><i class="fas fa-smile"></i> ChatCord</h1>
+        <a href="/index" class="btn">Leave Room</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i>Welcome!</h3>
+          <h2 id="room-name">Chat room: <%= roomName %></h2>
+          <h3><i class="fas fa-users"></i> Users</h3>
+          <ul id="users">
+
+          </ul>
+        </div>
+        <div id="message-container">
+        </div>
+      </main>
+      <div class="chat-form-container">
+        <form id="send-container">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button type="submit" id="send-button"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
   </section>
 </body>
 

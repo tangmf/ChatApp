@@ -11,6 +11,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="Styles/normalize.css">
   <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/style2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
 
   <!-- Nav bar -->
   <nav style="position: sticky;z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-dark">
-    <a class="navbar-brand" href="index.html"><img src="" alt="icon" style="width:60px;"> Chatapp</a>
+    <a class="navbar-brand" href="index.html"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,37 +57,43 @@
     <div class="jumbotron">
       <div class="container">
         <h2 class="display-3">Welcome!</h2>
-        <div class="col-lg-10">
-          <p>Are you feeling stressed out these days? Are you looking for someone that can listen to you?
-            Or would you like to know more about mental health?
-          </p>
-          <p>Then you have come to right place!</p>
+        <div class="row pt-auto">
+          <div class="col-lg-8">
+            <p>Are you feeling stressed out these days? Are you looking for someone that can listen to you?
+              Or would you like to know more about mental health?
+            </p>
+            <p>Then you have come to right place!</p>
+          </div>
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_decvxrvx.json"  background="transparent"  speed="1.5"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player>
         </div>
       </div>
     </div>
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-          <img src="/Images/chatroom.png" alt="Rooms" width="140" height="140">
           <h2>Chat room</h2>
+          <img src="/Images/room.jpg" alt="Rooms" width="140" height="140">
+          
           <p></p>
           <p><a class="btn btn-secondary" href="/search" role="button">Head over here to create a room »</a></p>
         </div>
         <div class="col-lg-4">
-          <img src="#" alt="Blog" width="140" height="140">
           <h2>Blog</h2>
+          <img src="/Images/blog.png" alt="Blog" width="140" height="140">
+          
           <p></p>
           <p><a class="btn btn-secondary" href="/blog" role="button">View details »</a></p>
         </div>
         <div class="col-lg-4">
-          <img src="#" alt="About" width="140" height="140">
-          <h2>About</h2>
+          <h2>Quiz</h2>
+          <img src="/Images/quiz.jpg" alt="Quiz" width="140" height="140">
+          
           <p></p>
-          <p><a class="btn btn-secondary" href="/about" role="button">Come here for more information »</a></p>
+          <p><a class="btn btn-secondary" href="/quiz" role="button">Take a quiz »</a></p>
         </div>
-
-      </div>
-  </main>>
+        </div>
+  </main>
 
   <div class="container">
     <div class="chatbox">
@@ -113,7 +120,6 @@
       </div>
     </div>
   </div>
-
   <footer class="container">
     <hr>
     <p class="float-right"><a href="#">Back to top</a></p>
