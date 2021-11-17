@@ -17,66 +17,66 @@ let availableQuestions = [];
 let questions = [
     {
         // question 1
-        question: 'What is Covid-19?',
-        choice1: 'Bacteria',
-        choice2: 'Virus',
-        choice3: 'Cell',
-        choice4: 'Device',
+        question: 'Which of these is NOT classed as a symptom of having a mental health problem?',
+        choice1: 'Self-harm',
+        choice2: 'Broken bones',
+        choice3: 'Low self esteem',
+        choice4: 'Social withdrawal',
         answer: '2',
     },
     {
         // question 2
-        question: 'In what year did we find out about Covid-19?',
-        choice1: '2009',
-        choice2: '2016',
-        choice3: '2021',
-        choice4: '2019',
-        answer: '4',
+        question: 'Mental illnesses are',
+        choice1: 'Not very common',
+        choice2: 'a myth, and do not exist',
+        choice3: 'Very common',
+        choice4: 'Fairly common',
+        answer: '3',
     },
     {
         // question 3
-        question: 'How does Covid-19 spread?',
-        choice1: 'Through direct contant with a bear',
-        choice2: 'Through droplets of saliva from an infected person',
-        choice3: 'By washing your hands regularly',
-        choice4: 'By staying at home',
-        answer: '2',
+        question: 'If you know someone with poor mental health, you can help by:',
+        choice1: 'Helping them access mental health services',
+        choice2: 'Reaching out and letting them know help is available',
+        choice3: 'Learning and sharing the facts about mental health, especially if you hear something that is not true',
+        choice4: 'All of the above',
+        answer: '4',
     },
     {
         // question 4
-        question: 'What should you do if you feel unwell?',
-        choice1: 'See a doctor immediately',
-        choice2: 'Go out with your friends',
-        choice3: 'Not wear a mask when going out',
-        choice4: 'Do some exercise',
+        question: 'Mental illness is caused by',
+        choice1: 'A number of factors including biological factors, stressful or traumatic life events, and long-lasting health conditions such as heart disease or cancer',
+        choice2: 'Lack of willpower',
+        choice3: 'Personal weakness',
+        choice4: 'None of the above',
         answer: '1',
     },
     {
         // question 5
-        question: 'Where did COVID-19 start?',
-        choice1: 'Singapore',
-        choice2: 'Wuhan',
-        choice3: 'Russia',
-        choice4: 'USA',
-        answer: '2',
-    },
-    {
-        // question 6
-        question: 'What is an example of good hygiene?',
-        choice1: 'Touching the lift button and then touching your face',
-        choice2: 'Not washing your hands after using the restroom',
-        choice3: 'Washing hands frequently with soap and water for at least 20 seconds',
-        choice4: 'Using sanitizer with less than 60% alcohol',
+        question: 'Mental health is:',
+        choice1: 'Only important to some people',
+        choice2: 'More than the absence of mental disorders',
+        choice3: 'An important part of overall health and well-being',
+        choice4: 'None of the above',
         answer: '3',
     },
     {
-        // question 7
-        question: 'What is one servere symptom of COVID-19?',
-        choice1: 'High temperature of more than 38°C',
-        choice2: 'Dry cough',
-        choice3: 'Headache',
-        choice4: 'Sore throat',
+        // question 6
+        question: "If you are having a conversation about someone's mental health, what should you NOT do?",
+        choice1: 'Tell them you will talk to other people about it',
+        choice2: 'Ask simple questions and encourage them to share',
+        choice3: 'Choose an appropriate place that makes them feel relaxed',
+        choice4: 'Reassure the person',
         answer: '1',
+    },
+    {
+        // question 7
+        question: 'What should someone do if they think they have a mental health condition?',
+        choice1: 'Search their symptoms online',
+        choice2: 'Take an online quiz to verify their symptoms',
+        choice3: "Don't tell anyone",
+        choice4: 'Seek help by talking to a doctor, parent, or an adult they trust',
+        answer: '4',
     },
     {
         // question 8
@@ -90,11 +90,11 @@ let questions = [
     {
         // question 9
         question: 'What does the word "corona" in Coronavirus refers to?',
-        choice1: 'A shirt',
-        choice2: 'A cap',
-        choice3: 'Sunglasses',
-        choice4: 'A crown',
-        answer: '4',
+        choice1: 'yes',
+        choice2: 'no',
+        choice3: '',
+        choice4: '',
+        answer: '2',
     },
     {
         // question 10
