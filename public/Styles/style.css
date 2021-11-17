@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.navbar-custom {
+  background-color: #018957;
+}
+
 nav{
   top: 0;
   width:100%;
@@ -15,6 +19,10 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
+  }
+
+  .page-title{
+    padding-top: 2%;
   }
 
   #message-container {
