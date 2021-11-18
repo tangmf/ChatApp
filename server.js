@@ -51,10 +51,12 @@ app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
     return res.redirect('/')
   }
-  rooms[req.body.room] = { users: {} }
-  res.redirect(req.body.room)
+  roomvalue = [req.body.room, req.body.categories]
+  rooms[roomvalue] = { users: {} }
+  res.redirect(roomvalue)
+  console.log(roomvalue)
   // Send message that new room was created
-  io.emit('room-created', req.body.room)
+  io.emit('room-created', roomvalue)
 })
 
 app.get('/:room', (req, res) => {
