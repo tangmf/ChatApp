@@ -30,6 +30,9 @@ nav{
 }
 
 body {
+    background-image: url("/Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -422,6 +425,29 @@ body {
 }
 .about-container .box:nth-child(3){
   background: rgb(225, 245, 179);
+}
+
+/*community.ejs*/
+.comm-container{
+  width: 40%;
+  height: 40%;
+  padding: 2% 2%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.comm-container .box{
+  position: relative;
+  float:left;
+  padding: 3% 3%;
+  background-color: rgb(225, 245, 179);
+  margin:15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  display:flex;
+  justify-content: space-between;
 }
 
 .container-f{
