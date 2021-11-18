@@ -180,6 +180,7 @@ body {
     font-size: 17px;
   }
   
+ 
   /* Chat Page */
   
   .chat-container {
@@ -269,18 +270,46 @@ body {
 	  height: 40px;
 	  flex: 1;
   }
-  
+   /* Search page */
+
+   /* .search-container{
+    background-color: #018957;
+    margin: 50px;
+    width: 400px;
+  } */
+  .create-btn{
+    text-align: center;
+    padding: 20px;
+    background-color: #38D99E;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    /* left: 50%; */
+    width: 400px;
+  }
+  #room-container{
+    text-align: center;
+  }
+  .room-text{
+    text-align: center;
+  }
+
   /* Join Page */
   .join-container {
+    width: 400px;
+    height: 400px;
     max-width: 500px;
-    margin: 80px auto;
-    color: #fff;
+    margin: 50px auto;
+    color: #000;
+    background-color: #ECFAF2;
+    position: relative;
   }
   
   .join-header {
     text-align: center;
     padding: 20px;
-    background: var(--dark-color-a);
+    background-color: #38D99E;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }

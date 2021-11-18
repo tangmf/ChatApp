@@ -58,19 +58,24 @@
 
     </div>
   </nav>
-  <div class="join-container">
-    <h2 class='join-header'>Rooms Available</h2>
-    <div id="room-container">
+  <!-- <div class="search-container"> -->
+    <div class="join-container">
+      <h2 class='join-header'>Rooms Available</h2>
+      <div id="room-container">
 
-      <% Object.keys(rooms).forEach(room=> { %>
-        <div>
-          <%= room %>: <a href="/<%= room %>">Join</a>
-        </div>
+        <% Object.keys(rooms).forEach(room=> { %>
+          <div class="room-text">
+            <%= room %>: <a href="/<%= room %>">Join</a>
+          </div>
 
-        <% }) %>
+          <% }) %>
+      </div>
+      <div class="create-btn">
+        <a href="/createroom">Create Room</a>
+      </div>
+
     </div>
-  </div>
-  <a href="/createroom">Create Room</a>
+  <!-- </div> -->
   <footer class="container">
     <hr>
     <p class="float-right"><a href="#">Back to top</a></p>
