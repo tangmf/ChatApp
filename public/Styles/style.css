@@ -39,6 +39,7 @@ body {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -57,7 +58,7 @@ body {
 
   margin: auto;
 }
-.container-h button{
+.container-h .btn-h{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -73,6 +74,22 @@ body {
 }
 .container-h .h2{
   margin: 0 10px 10px;
+}
+
+.btn-h{
+  position: relative;
+  height: 50px;
+  width: 300px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  
 }
 
 @media only screen and (max-width: 768px){
@@ -379,3 +396,6 @@ body {
   background: rgb(225, 245, 179);
 }
 
+.container-f{
+  margin-top: 50px;
+}
