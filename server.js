@@ -38,6 +38,9 @@ app.get('/game', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about')
 })
+app.get('/community', (req, res) => {
+  res.render('community')
+})
 
 app.use(express.static("images"));
 
