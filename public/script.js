@@ -8,7 +8,7 @@ const userContainer = document.getElementById('users')
 if (messageForm != null) {
   const name = prompt('What is your name?')
   socket.emit('new-user', roomName, name)
-  userContainer.append(`\n ${name}`)
+  userContainer.innerHTML += (`<div> ${name}</div>`)
 
   messageForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -43,7 +43,7 @@ socket.on('msg', (history, userlist) => {
   })
     userlist.forEach(element => {
       if(element != null){
-        userContainer.append(`${element}`)
+        userContainer.innerHTML += (`<div>${element}</div>`)
       }
       
     })
@@ -53,7 +53,7 @@ socket.on('msg', (history, userlist) => {
 
 socket.on('user-connected', name => {
   appendMessage(`${name} connected`)
-  userContainer.append(`\n ${name}`)
+  userContainer.innerHTML += (`<div>${name}</div>`)
 })
 
 
