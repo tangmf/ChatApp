@@ -379,3 +379,29 @@ body {
   background: rgb(225, 245, 179);
 }
 
+/*community.ejs*/
+.comm-container{
+  position: relative;
+  width: 1000px;
+  height:600px;
+  margin: 100px auto;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.comm-container .box{
+  position: relative;
+  width: calc(350px - 45px);
+  height: calc(300px - 30px);
+  float:left;
+  background-color: rgb(225, 245, 179);
+  margin:15px;
+  padding: 1%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  display:flex;
+  justify-content: space-between;
+}
+
