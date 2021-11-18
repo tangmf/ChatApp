@@ -1,8 +1,8 @@
 const socket = io.connect()
-const messageContainer = document.getElementById('message-container')
+const messageContainer = document.getElementById('chat-messages')
 const roomContainer = document.getElementById('room-container')
-const messageForm = document.getElementById('send-container')
-const messageInput = document.getElementById('message-input')
+const messageForm = document.getElementById('chat-form')
+const messageInput = document.getElementById('msg')
 const userContainer = document.getElementById('users')
 
 if (messageForm != null) {
