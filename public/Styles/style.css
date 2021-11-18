@@ -180,7 +180,6 @@ body {
     font-size: 17px;
   }
   
-<<<<<<< HEAD
  
   /* Chat Page */
   
@@ -278,6 +277,15 @@ body {
     margin: 50px;
     width: 400px;
   } */
+  /* .join-container {
+    width: 400px;
+    height: 400px;
+    max-width: 500px;
+    margin: 50px auto;
+    color: #000;
+    background-color: #ECFAF2;
+    position: relative;
+  } */
   .create-btn{
     text-align: center;
     padding: 20px;
@@ -289,16 +297,33 @@ body {
     /* left: 50%; */
     width: 400px;
   }
+  .create-btn a{
+    text-decoration: none;
+
+  }
   #room-container{
     text-align: center;
+    width: 400px;
+    height: 200px;
+    max-width: 500px;
+    margin: 50px auto;
+    color: #000;
+    background-color: #ECFAF2;
+    position: relative;
   }
   .room-text{
     text-align: center;
   }
 
-=======
-  
->>>>>>> c8c1347dbd14a138bd99d73f0771a850b49067f5
+  button[type="submit"]{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
   /* Join Page */
   .join-container {
     width: 400px;
@@ -318,41 +343,54 @@ body {
     border-top-right-radius: 5px;
   }
   
-  .join-main {
-    padding: 30px 40px;
-    background: var(--dark-color-b);
-  }
+  /* .form-row {
+    padding: 10px 30px;
+    background: var(--dark-color-b); 
+  } */
   
-  .join-main p {
+  .form-row p {
     margin-bottom: 20px;
   }
   
-  .join-main .form-control {
+  .form-row .form-control {
     margin-bottom: 20px;
   }
   
-  .join-main label {
+  .form-row label {
     display: block;
     margin-bottom: 5px;
   }
   
-  .join-main input[type='text'] {
+  .form-row input[type='text'] {
     font-size: 16px;
     padding: 5px;
     height: 40px;
     width: 100%;
   }
   
-  .join-main select {
+  .form-row select {
     font-size: 16px;
     padding: 5px;
     height: 40px;
     width: 100%;
   }
   
-  .join-main .btn {
+  .form-row .btn {
     margin-top: 20px;
     width: 100%;
+  }
+  .full-form-row{
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form-row{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
   }
   
   @media (max-width: 700px) {

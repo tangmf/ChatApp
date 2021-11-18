@@ -58,21 +58,56 @@
 
     </div>
   </nav>
+  <div class="join-container">
+    <h2 class='join-header'>Create Room</h2>
+    <form class="room-container" action="/room" method="POST">
+      <div class="full-form-row">
+        <div class="form-row">
+          <label for="room">Room name:</label>
+          <input name="room" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="categories">Choose a category:</label>
+          <select id="categories" name="categories">
+            <option value="Mental illness">Mental illness</option>
+            <option value="Mood disorders">Mood disorders</option>
+            <option value="Anxiety disorders">Anxiety disorders</option>
+            <option value="Trauma-related disorders">Trauma-related disorders</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+      <div class="create-btn">
+        <button type="submit">New Room</button>
 
-  <h2 class='page-title'>Create Room</h2>
-  <form class="container" action="/room" method="POST">
-    <label for="room">Room name:</label>
-    <input name="room" type="text" required>
-    <label for="categories">Choose a category:</label>
-    <select id="categories" name="categories">
-      <option value="Mental illness">Mental illness</option>
-      <option value="Mood disorders">Mood disorders</option>
-      <option value="Anxiety disorders">Anxiety disorders</option>
-      <option value="Trauma-related disorders">Trauma-related disorders</option>
-      <option value="Others">Others</option>
-    </select>
-    <button type="submit">New Room</button>
-  </form>
+      </div>
+
+    </form>
+  </div>
+  <!-- 
+  <div id="room-container">
+    <h2 class='join-header'>Create Room</h2>
+    <main class="join-main">
+      <form class="join-container" action="/room" method="POST">
+        <div class="form-control">
+          <label for="room">Room name:</label>
+          <input name="room" type="text" required>
+        </div>
+        <div class="form-control">
+          <label for="categories">Choose a category:</label>
+          <select id="categories" name="categories">
+            <option value="Mental illness">Mental illness</option>
+            <option value="Mood disorders">Mood disorders</option>
+            <option value="Anxiety disorders">Anxiety disorders</option>
+            <option value="Trauma-related disorders">Trauma-related disorders</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <button type="submit">New Room</button>
+
+      </form>
+    </main>
+  </div> -->
 
   <footer class="container">
     <hr>
