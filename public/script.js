@@ -1,8 +1,8 @@
 const socket = io.connect()
-const messageContainer = document.getElementById('message-container')
+const messageContainer = document.getElementById('chat-messages')
 const roomContainer = document.getElementById('room-container')
-const messageForm = document.getElementById('send-container')
-const messageInput = document.getElementById('message-input')
+const messageForm = document.getElementById('chat-form')
+const messageInput = document.getElementById('msg')
 const userContainer = document.getElementById('users')
 
 if (messageForm != null) {
@@ -62,7 +62,25 @@ socket.on('user-disconnected', name => {
 })
 
 function appendMessage(message) {
+  /*
   const messageElement = document.createElement('div')
   messageElement.innerText = message
   messageContainer.append(messageElement)
+  */
+  const div = document.createElement('div');
+  div.classList.add('message');
+  const p = document.createElement('p');
+  p.classList.add('text');
+  p.innerText = message;
+  div.appendChild(p);
+  document.querySelector('#chat-messages').appendChild(div);
 }
+
+//Prompt the user before leave chat room
+document.getElementById('leave-btn').addEventListener('click', () => {
+  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+  if (leaveRoom) {
+    window.location = '../index.html';
+  } else {
+  }
+});

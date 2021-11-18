@@ -180,6 +180,7 @@ body {
     font-size: 17px;
   }
   
+<<<<<<< HEAD
  
   /* Chat Page */
   
@@ -295,6 +296,9 @@ body {
     text-align: center;
   }
 
+=======
+  
+>>>>>>> c8c1347dbd14a138bd99d73f0771a850b49067f5
   /* Join Page */
   .join-container {
     width: 400px;
@@ -462,19 +466,19 @@ body {
 
 /*community.ejs*/
 .comm-container{
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
   padding: 2% 2%;
   display:flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .comm-container .box{
   position: relative;
+  width:30%;
   float:left;
   padding: 3% 3%;
-  background-color: rgb(225, 245, 179);
   margin:15px;
   box-sizing: border-box;
   overflow: hidden;
