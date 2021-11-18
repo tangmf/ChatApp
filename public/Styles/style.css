@@ -88,7 +88,7 @@ body {
   margin: auto;
 }
 
-.container-h:hover, .btn:focus, .btn:active{
+.container-h:hover, .btn-h:focus, .btn-h:active{
   box-shadow: 0 0 20px #38D99E;
   background-color: #ECFAF2;
   -webkit-transform: scale(1.1);
@@ -111,7 +111,11 @@ body {
   text-align: center;
   align-items: center;
   display: flex;
-  
+  background-color: transparent;
+  color: black;
+}
+.btn-h:hover{
+  background-color: #38D99E;
 }
 
 @media only screen and (max-width: 768px){
