@@ -400,17 +400,17 @@ body {
 .about-container{
   position:relative;
   width: 1000px;
-  height:600px;
-  margin: 100px auto;
+  height:1000px;
+  margin: 10px;
   /* background-color: #018957; */
 }
 
 .about-container .box{
   position: relative;
   width: calc(500px - 45px);
-  height: calc(300px - 30px);
+  height: calc(400px - 30px);
   float:left;
-  background-color: rgb(225, 245, 179);
+  background-color: #ECFAF2;
   margin:15px;
   box-sizing: border-box;
   overflow: hidden;
@@ -479,20 +479,20 @@ body {
   background: #38D99E;
 }
 .about-container .box:nth-child(1){
-  background: rgb(225, 245, 179);
+  background: #ECFAF2;
 }
 
 .about-container .box:nth-child(2).icon{
   background: #38D99E;
 }
 .about-container .box:nth-child(2){
-  background: rgb(225, 245, 179);
+  background: #ECFAF2;
 }
 .about-container .box:nth-child(3).icon{
   background: #38D99E;
 }
 .about-container .box:nth-child(3){
-  background: rgb(225, 245, 179);
+  background: #ECFAF2;
 }
 
 /*community.ejs*/
