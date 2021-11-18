@@ -40,8 +40,11 @@ app.get('/about', (req, res) => {
 })
 app.get('/feed',(req,res) =>{
   res.render('feed')
-})
 
+})
+app.get('/community', (req, res) => {
+  res.render('community')
+})
 app.use(express.static("images"));
 
 app.post('/room', (req, res) => {

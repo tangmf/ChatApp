@@ -46,6 +46,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/community">Community</a>
+        </li>
 
       </ul>
 
@@ -53,9 +56,17 @@
   </nav>
 
   <h2 class='page-title'>Create Room</h2>
-  <form action="/room" method="POST">
-    
+  <form class="container" action="/room" method="POST">
+    <label for="room">Room name:</label>
     <input name="room" type="text" required>
+    <label for="categories">Choose a category:</label>
+    <select id="categories" name="categories">
+      <option value="mental illness">Mental illness</option>
+      <option value="mood disorders">Mood disorders</option>
+      <option value="anxiety disorders">Anxiety disorders</option>
+      <option value="trauma-related disorders">Trauma-related disorders</option>
+      <option value="others">Others</option>
+    </select>
     <button type="submit">New Room</button>
   </form>
 

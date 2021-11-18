@@ -55,10 +55,10 @@ let questions = [
         // question 5
         question: 'Mental health is:',
         choice1: 'Only important to some people',
-        choice2: 'More than the absence of mental disorders',
-        choice3: 'An important part of overall health and well-being',
+        choice2: 'An important part of overall health and well-being',
+        choice3: 'More than the absence of mental disorders',
         choice4: 'None of the above',
-        answer: '3',
+        answer: '2',
     },
     {
         // question 6
@@ -80,30 +80,30 @@ let questions = [
     },
     {
         // question 8
-        question: 'Can COVID-19 be spread by touching an infected person?',
-        choice1: 'Yes',
-        choice2: 'No, but it is recommended to avoid infected patients.',
-        choice3: 'Maybe',
-        choice4: 'Unsure',
-        answer: '2',
+        question: 'Why is mental health important?',
+        choice1: "Good mental health can help you cope with life's stresses",
+        choice2: 'Good mental health can help you have good relationships with others',
+        choice3: 'Good mental health can help you realize your full potential',
+        choice4: 'All of the above',
+        answer: '4',
     },
     {
         // question 9
-        question: 'What does the word "corona" in Coronavirus refers to?',
-        choice1: 'yes',
-        choice2: 'no',
-        choice3: '',
-        choice4: '',
+        question: 'What can you do to have good mental health?',
+        choice1: 'Sleep as late as possible so that you can always enjoy life to the fullest',
+        choice2: 'Connect with others and be sociable because friends are people you can rely on for support',
+        choice3: 'Stay indoors becuase it is not healthy to go out when it is sunny',
+        choice4: 'Let all your stress build up so that you will have motivation to do everything at once',
         answer: '2',
     },
     {
         // question 10
-        question: 'Are you immune to COVID-19 if you have had it before?',
-        choice1: 'Yes',
-        choice2: 'No',
-        choice3: 'Maybe',
-        choice4: 'Unsure',
-        answer: '2',
+        question: 'At what age can you get mental illness?',
+        choice1: 'When your 18 years old and above',
+        choice2: 'When your 14 years old',
+        choice3: 'Any age',
+        choice4: 'Mental illness only occurs in adults aged 30 and above',
+        answer: '3',
     },
     
 ];
