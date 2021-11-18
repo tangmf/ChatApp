@@ -406,10 +406,9 @@ body {
 
 /*community.ejs*/
 .comm-container{
-  position: relative;
-  width: 1000px;
-  height:600px;
-  margin: 100px auto;
+  width: 40%;
+  height: 40%;
+  padding: 2% 2%;
   display:flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -417,12 +416,10 @@ body {
 
 .comm-container .box{
   position: relative;
-  width: calc(350px - 45px);
-  height: calc(300px - 30px);
   float:left;
+  padding: 3% 3%;
   background-color: rgb(225, 245, 179);
   margin:15px;
-  padding: 1%;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 10px;
