@@ -14,6 +14,9 @@ nav{
 }
 
 body {
+    background-image: url("/Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
     flex-direction: column;
     padding: 0;
     margin: 0;
