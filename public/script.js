@@ -3,10 +3,12 @@ const messageContainer = document.getElementById('message-container')
 const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
+const userContainer = document.getElementById('users')
 
 if (messageForm != null) {
   const name = prompt('What is your name?')
   socket.emit('new-user', roomName, name)
+  userContainer.append(`\n ${name}`)
 
   messageForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -34,17 +36,26 @@ socket.on('chat-message', data => {
   messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-socket.on('msg', data => {
-  console.log("Recieved client history: " + data)
-  data.forEach(element => {
+socket.on('msg', (history, userlist) => {
+  console.log("Recieved client history: " + history)
+  history.forEach(element => {
     appendMessage(`${element[0]}: ${element[1]}`)
   })
+    userlist.forEach(element => {
+      if(element != null){
+        userContainer.append(`${element}`)
+      }
+      
+    })
+  
   appendMessage('You joined')
 })
 
 socket.on('user-connected', name => {
   appendMessage(`${name} connected`)
+  userContainer.append(`\n ${name}`)
 })
+
 
 socket.on('user-disconnected', name => {
   appendMessage(`${name} disconnected`)
