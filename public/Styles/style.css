@@ -5,7 +5,7 @@
 }
 
 .navbar-custom {
-  background-color: #018957;
+  background-color: #ECFAF2;
 }
 
 nav{
@@ -29,6 +29,9 @@ body {
 
 
 /* Home page */
+.jumbotron{
+  background-color: #38D99E;
+}
 .row-h{
   display: flex;
   flex-direction: row;
@@ -39,6 +42,7 @@ body {
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
+  box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -57,7 +61,7 @@ body {
 
   margin: auto;
 }
-.container-h button{
+.container-h .btn-h{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -66,8 +70,8 @@ body {
 }
 
 .container-h:hover, .btn:focus, .btn:active{
-  box-shadow: 0 0 20px rgb(225, 245, 179);
-  background-color: #c7c7cc;
+  box-shadow: 0 0 20px #38D99E;
+  background-color: #ECFAF2;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -75,11 +79,32 @@ body {
   margin: 0 10px 10px;
 }
 
+.btn-h{
+  position: relative;
+  height: 50px;
+  width: 300px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  
+}
+
 @media only screen and (max-width: 768px){
   .row-h{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
+  
 }
 
 
@@ -282,7 +307,7 @@ body {
 
  /* about.ejs  */
 .about-container{
-  position: relative;
+  position:relative;
   width: 1000px;
   height:600px;
   margin: 100px auto;
@@ -312,7 +337,7 @@ body {
 
 .about-container .box:hover .icon{
   top: 20px;
-  background-color:#018957;
+  background-color:#38D99E;
   left:calc(50% - 40px);
   width: 80px;
   height: 80px;
@@ -360,20 +385,20 @@ body {
 }
 
 .about-container .box:nth-child(1).icon{
-  background: #018957;
+  background: #38D99E;
 }
 .about-container .box:nth-child(1){
   background: rgb(225, 245, 179);
 }
 
 .about-container .box:nth-child(2).icon{
-  background: #018957;
+  background: #38D99E;
 }
 .about-container .box:nth-child(2){
   background: rgb(225, 245, 179);
 }
 .about-container .box:nth-child(3).icon{
-  background: #018957;
+  background: #38D99E;
 }
 .about-container .box:nth-child(3){
   background: rgb(225, 245, 179);
@@ -405,3 +430,6 @@ body {
   justify-content: space-between;
 }
 
+.container-f{
+  margin-top: 50px;
+}

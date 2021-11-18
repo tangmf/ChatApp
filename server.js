@@ -38,20 +38,25 @@ app.get('/game', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about')
 })
+app.get('/feed',(req,res) =>{
+  res.render('feed')
+
+})
 app.get('/community', (req, res) => {
   res.render('community')
 })
-
 app.use(express.static("images"));
 
 app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
     return res.redirect('/')
   }
-  rooms[req.body.room] = { users: {} }
-  res.redirect(req.body.room)
+  roomvalue = [req.body.room, req.body.categories]
+  rooms[roomvalue] = { users: {} }
+  res.redirect(roomvalue)
+  console.log(roomvalue)
   // Send message that new room was created
-  io.emit('room-created', req.body.room)
+  io.emit('room-created', roomvalue)
 })
 
 app.get('/:room', (req, res) => {
@@ -64,7 +69,8 @@ app.get('/:room', (req, res) => {
 server.listen(port)
 const history = []
 const client = []
-io.on('connection', socket => {
+const userlist = []
+io.on('connection', (socket,name) => {
   client.push({id : socket.client.id})
   console.log(client)
 
@@ -72,13 +78,15 @@ var getClientID = client.find(e => (e.id === socket.client.id))
  console.log("the Client", getClientID)
  if(getClientID){
   //io.sockets.emit("msg",history);
-  socket.emit("msg",history)
+  userlist.push(name)
+  socket.emit("msg",history, userlist)
   console.log(history)
  }
   socket.on('new-user', (room, name) => {
     socket.join(room)
     rooms[room].users[socket.id] = name
     socket.to(room).broadcast.emit('user-connected', name)
+    userlist.push(name)
   })
   socket.on('send-chat-message', (room, message, name) => {
     messagearray = [name, message]
