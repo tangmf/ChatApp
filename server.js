@@ -40,11 +40,20 @@ app.get('/about', (req, res) => {
 })
 app.get('/feed',(req,res) =>{
   res.render('feed')
-
 })
 app.get('/community', (req, res) => {
   res.render('community')
 })
+
+app.get('/illness', (req, res) => {
+  res.render('illness')
+})
+
+app.get('/depression', (req, res) => {
+  res.render('mental-illness/depression')
+})
+
+
 app.use(express.static("images"));
 
 app.post('/room', (req, res) => {
