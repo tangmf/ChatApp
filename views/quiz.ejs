@@ -10,6 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
   <!-- Styles -->
   <link rel="stylesheet" href="Styles/normalize.css">
   <link rel="stylesheet" href="Styles/style.css">
@@ -24,8 +25,8 @@
 
 
   <!-- Nav bar -->
-  <nav style="position: sticky;z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-light">
-    <a class="navbar-brand" href="index.html"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
+  <nav style="position: sticky; z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-light">
+    <a class="navbar-brand" href="index.ejs"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,10 +35,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto navbar-brand">
         <li class="nav-item active">
-          <a class="nav-link" href="/index">Home</a>
+          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href='/search'>Rooms</a>
+          <a class="nav-link" href="/search">Rooms</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/blog">Blog</a>
@@ -48,7 +49,23 @@
         <li class="nav-item">
           <a class="nav-link" href="/quiz">Quiz</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Learn
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">About mental illnesses</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">About hobbies</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
       </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
       <ul class="navbar-nav ml-auto navbar-brand">
         <li>
           <a class="nav-link" href="/community">Community</a>
@@ -62,18 +79,18 @@
 
   <div class="container">
     <div id="home" class="flex-column flex-center">
-        <h2><b>Test your Mental Health Awareness</b></h2>
-        <br>
-        <div id = "quiz_instructions">
-        <p>Based on findings from the Singapore Mental Health Study conducted by the Insitute of Mental Health 
-        in 2016, 1 in 7 people in Singapore has experienced a mental health problem at some point in their lives.
-        Ill mental health can significantly impact people’s day to day lives, particularly in the workplace,
-        because so many people still struggle to fully grasp the topic of mental health and understand how to
-        help those with mental health issues feel encouraged and supported in their role.</p>
+      <h2><b>Test your Mental Health Awareness</b></h2>
+      <br>
+      <div id="quiz_instructions">
+        <p>Based on findings from the Singapore Mental Health Study conducted by the Insitute of Mental Health
+          in 2016, 1 in 7 people in Singapore has experienced a mental health problem at some point in their lives.
+          Ill mental health can significantly impact people’s day to day lives, particularly in the workplace,
+          because so many people still struggle to fully grasp the topic of mental health and understand how to
+          help those with mental health issues feel encouraged and supported in their role.</p>
         <p><b>Try our quick quiz below to test your mental health awareness</b></p>
-        </div>
-        <a href="/game" class="btn container-h">Start</a>
-        
+      </div>
+      <a href="/game" class="btn container-h">Start</a>
+
     </div>
   </div>
 
@@ -88,6 +105,17 @@
     crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+  <!-- Bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
