@@ -53,6 +53,10 @@ app.get('/depression', (req, res) => {
   res.render('mental-illness/depression')
 })
 
+app.get('/dementia', (req, res) => {
+  res.render('mental-illness/dementia')
+})
+
 app.get('/test', (req, res) => {
   res.render('test')
 })
