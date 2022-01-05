@@ -84,3 +84,30 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+
+// speech recognition
+var speechRecognition = window.webkitSpeechRecognition
+
+var recognition = new speechRecognition()
+
+var textbox = $("#textbox")
+
+var instructions = $(#instructions)
+
+var content = ''
+
+recognition.continuous = true
+
+//recognition started
+
+recognition.onstart = function(){
+  instructions.text("Voice recognition is on")
+}
+
+$("#start-btn").click(function(event){
+  if(content.length){
+    content += ''
+  }
+
+  recognition.start()
+})

@@ -53,7 +53,9 @@ app.get('/depression', (req, res) => {
   res.render('mental-illness/depression')
 })
 
-
+app.get('/test', (req, res) => {
+  res.render('test')
+})
 app.use(express.static("images"));
 
 app.post('/room', (req, res) => {
