@@ -49,8 +49,8 @@ app.get('/illness', (req, res) => {
   res.render('illness')
 })
 
-app.get('/depression', (req, res) => {
-  res.render('mental-illness/depression')
+app.get('/illness_about', (req, res) => {
+  res.render('illness_about')
 })
 
 app.get('/dementia', (req, res) => {
