@@ -24,7 +24,7 @@
 
   <!-- Nav bar -->
   <nav style="position: sticky; z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-light">
-    <a class="navbar-brand" href="index.html"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
+    <a class="navbar-brand" href="/index"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,20 +32,20 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto navbar-brand">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="search.html">Rooms</a>
+          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="/search">Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="feed.html">News</a>
+          <a class="nav-link" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="quiz.html">Quiz</a>
+          <a class="nav-link" href="/feed">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/quiz">Quiz</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -53,7 +53,7 @@
             Learn
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="illness.html">About mental illnesses</a>
+            <a class="dropdown-item" href="/illness">About mental illnesses</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">About hobbies</a>
             <a class="dropdown-item" href="#">Something else here</a>
@@ -66,65 +66,34 @@
       </form> -->
       <ul class="navbar-nav ml-auto navbar-brand">
         <li>
-          <a class="nav-link" href="community.html">Community</a>
+          <a class="nav-link" href="/community">Community</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
     </div>
   </nav>
+  <!-- <div class="search-container"> -->
   <div class="join-container">
-    <h2 class='join-header'>Create Room</h2>
-    <form class="room-container" action="/room" method="POST">
-      <div class="full-form-row">
-        <div class="form-row">
-          <label for="room">Room name:</label>
-          <input name="room" type="text" required>
-        </div>
-        <div class="form-row">
-          <label for="categories">Choose a category:</label>
-          <select id="categories" name="categories">
-            <option value="Mental illness">Mental illness</option>
-            <option value="Mood disorders">Mood disorders</option>
-            <option value="Anxiety disorders">Anxiety disorders</option>
-            <option value="Trauma-related disorders">Trauma-related disorders</option>
-            <option value="Others">Others</option>
-          </select>
-        </div>
-      </div>
-      <div class="create-btn">
-        <button type="submit">New Room</button>
+    <h2 class='join-header'>Rooms Available</h2>
+    <div id="room-container">
 
-      </div>
+      <% Object.keys(rooms).forEach(room=> { %>
+        <div class="room-text">
+          <%= room %>: <a href="/<%= room %>">Join</a>
+        </div>
 
-    </form>
+        <% }) %>
+    </div>
+    <div class="create-btn">
+      <a href="/createroom">Create Room</a>
+    </div>
   </div>
-  <!-- 
-  <div id="room-container">
-    <h2 class='join-header'>Create Room</h2>
-    <main class="join-main">
-      <form class="join-container" action="/room" method="POST">
-        <div class="form-control">
-          <label for="room">Room name:</label>
-          <input name="room" type="text" required>
-        </div>
-        <div class="form-control">
-          <label for="categories">Choose a category:</label>
-          <select id="categories" name="categories">
-            <option value="Mental illness">Mental illness</option>
-            <option value="Mood disorders">Mood disorders</option>
-            <option value="Anxiety disorders">Anxiety disorders</option>
-            <option value="Trauma-related disorders">Trauma-related disorders</option>
-            <option value="Others">Others</option>
-          </select>
-        </div>
-        <button type="submit">New Room</button>
-
-      </form>
-    </main>
-  </div> -->
-
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_QpolL2.json" background="transparent" speed="1"
+    style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+  <!-- </div> -->
   <footer class="container">
     <hr>
     <p class="float-right"><a href="#">Back to top</a></p>
@@ -138,6 +107,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 -->
+
   <!-- Bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -148,7 +118,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
