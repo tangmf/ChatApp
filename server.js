@@ -1,3 +1,4 @@
+const { createSocket } = require('dgram')
 const express = require('express')
 const app = express()
 const server = require('http').Server(app)
@@ -90,19 +91,24 @@ io.on('connection', (socket,name) => {
   console.log(client)
 
 var getClientID = client.find(e => (e.id === socket.client.id))
- console.log("the Client", getClientID)
- if(getClientID){
-  //io.sockets.emit("msg",history);
-  userlist.push(name)
-  socket.emit("msg",history, userlist)
-  console.log(history)
- }
   socket.on('new-user', (room, name) => {
     socket.join(room)
     rooms[room].users[socket.id] = name
     socket.to(room).broadcast.emit('user-connected', name)
-    userlist.push(name)
+    let newuser = new User(getClientID.id, name, "member")
+    userlist.push(newuser)
+    console.log("user list: ")
+    for(let i = 0;i<userlist.length;i++){
+      console.log(userlist[i].id + "," + userlist[i].name + "," + userlist[i].role)
+    }
+    if(getClientID){
+      //io.sockets.emit("msg",history);
+    
+      socket.emit("msg",history, userlist)
+      console.log(history)
+     }
   })
+  
   socket.on('send-chat-message', (room, message, name) => {
     messagearray = [name, message]
     history.push(messagearray)
@@ -113,7 +119,13 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     getUserRooms(socket).forEach(room => {
       socket.to(room).broadcast.emit('user-disconnected', rooms[room].users[socket.id])
       delete rooms[room].users[socket.id]
-    })
+      
+  })
+  for(let i = 0;i<userlist.length;i++){
+    if(getClientID.id == userlist[i].id){
+      userlist.splice(i, 1)
+    }
+  }
   })
 })
 
@@ -122,4 +134,16 @@ function getUserRooms(socket) {
     if (room.users[socket.id] != null) names.push(name)
     return names
   }, [])
+}
+
+function logdata(){
+
+}
+
+class User {
+  constructor(id, name, role) {
+    this.id = id;
+    this.name = name;
+    this.role = role;
+  }
 }
