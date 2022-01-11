@@ -97,6 +97,7 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     socket.to(room).broadcast.emit('user-connected', name)
     let newuser = new User(getClientID.id, name, "member")
     userlist.push(newuser)
+    userlist[0].role = "owner"
     console.log("user list: ")
     for(let i = 0;i<userlist.length;i++){
       console.log(userlist[i].id + "," + userlist[i].name + "," + userlist[i].role)
