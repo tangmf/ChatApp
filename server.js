@@ -113,6 +113,7 @@ var getClientID = client.find(e => (e.id === socket.client.id))
   socket.on('send-chat-message', (room, message, name) => {
     messagearray = [name, message]
     history.push(messagearray)
+
     console.log(history)
     socket.to(room).broadcast.emit('chat-message', { message: message, name: rooms[room].users[socket.id] })
   })
@@ -139,6 +140,16 @@ function getUserRooms(socket) {
 
 function logdata(){
 
+}
+
+function kick(userid){
+  for(let i = 0;i<userlist.length;i++){
+    // If given socket id is exist in list of all sockets, kill it
+    if(userlist[i].id === getClientID.id)
+    {
+        socket.disconnect(true)
+    }
+  }
 }
 
 class User {
