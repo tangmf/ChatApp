@@ -41,24 +41,38 @@ socket.on('msg', (history, userlist) => {
   history.forEach(element => {
     appendMessage(`${element[0]}: ${element[1]}`)
   })
-    userlist.forEach(element => {
-      if(element != null){
-        userContainer.innerHTML += (`<div>${element}</div>`)
-      }
-      
-    })
+  userContainer.innerHTML = ""
+  userlist.forEach(element => {
+    if(element != null){
+      userContainer.innerHTML += (`<div>${element.name}</div>`)
+    }
+    
+  })
   
   appendMessage('You joined')
 })
 
 socket.on('user-connected', name => {
   appendMessage(`${name} connected`)
-  userContainer.innerHTML += (`<div>${name}</div>`)
+  userContainer.innerHTML = ""
+  userlist.forEach(element => {
+    if(element != null){
+      userContainer.innerHTML += (`<div>${element.name}</div>`)
+    }
+    
+  })
 })
 
 
 socket.on('user-disconnected', name => {
   appendMessage(`${name} disconnected`)
+  userContainer.innerHTML = ""
+  userlist.forEach(element => {
+    if(element != null){
+      userContainer.innerHTML += (`<div>${element.name}</div>`)
+    }
+    
+  })
 })
 
 function appendMessage(message) {
@@ -85,6 +99,7 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   }
 });
 
+/*
 // speech recognition
 var speechRecognition = window.webkitSpeechRecognition
 
@@ -133,3 +148,4 @@ $("#start-btn").click(function(event){
 textbox.on('Input', function(){
   content = $(this).val()
 })
+*/
