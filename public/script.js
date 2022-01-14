@@ -8,7 +8,6 @@ const userContainer = document.getElementById('users')
 if (messageForm != null) {
   const name = prompt('What is your name?')
   socket.emit('new-user', roomName, name)
-  userContainer.innerHTML += (`<div> ${name}</div>`)
 
   messageForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -21,6 +20,11 @@ if (messageForm != null) {
   })
 }
 
+$(document).on('click', 'button', function() {
+  {
+     alert(this.id)
+  }
+})
 socket.on('room-created', room => {
   const roomElement = document.createElement('div')
   roomElement.innerText = room
@@ -41,38 +45,20 @@ socket.on('msg', (history, userlist) => {
   history.forEach(element => {
     appendMessage(`${element[0]}: ${element[1]}`)
   })
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
   
+  updateusers(userlist)
   appendMessage('You joined')
 })
 
-socket.on('user-connected', name => {
+socket.on('user-connected', (name,userlist) => {
   appendMessage(`${name} connected`)
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
+  updateusers(userlist)
 })
 
 
-socket.on('user-disconnected', name => {
+socket.on('user-disconnected', (name,userlist) => {
   appendMessage(`${name} disconnected`)
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
+  updateusers(userlist)
 })
 
 function appendMessage(message) {
@@ -99,4 +85,36 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   }
 });
 
+function updateusers(userlist){
+  userContainer.innerHTML = ""
+  admin = false
+  for(let i = 0;i<userlist.length;i++){
+    if(userlist[i].id == socket.id && userlist[i].role == 'owner'){
+      admin = true;
+    }
+  }
+  if(admin){
+    userlist.forEach(element => {
+      if(element != null){
+        userContainer.innerHTML += (`<div>${element.name} <button type="button" id=${element.id}>kick</button> <button type="button" id=${element.id}>mute</button></div>`)
+      }
+      
+    })
+  }
+  else{
+    userlist.forEach(element => {
+      if(element != null){
+        userContainer.innerHTML += (`<div>${element.name}</div>`)
+      }
+      
+    })
+  }
+  
+}
 
+
+/*
+// speech recognition
+var speechRecognition = window.webkitSpeechRecognition
+
+*/

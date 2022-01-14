@@ -99,7 +99,7 @@ var getClientID = client.find(e => (e.id === socket.client.id))
   socket.on('new-user', (room, name) => {
     socket.join(room)
     rooms[room].users[socket.id] = name
-    socket.to(room).broadcast.emit('user-connected', name)
+    
     let newuser = new User(getClientID.id, name, "member")
     userlist.push(newuser)
     userlist[0].role = "owner"
@@ -107,6 +107,7 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     for(let i = 0;i<userlist.length;i++){
       console.log(userlist[i].id + "," + userlist[i].name + "," + userlist[i].role)
     }
+    socket.to(room).broadcast.emit('user-connected', name,userlist)
     if(getClientID){
       //io.sockets.emit("msg",history);
     
@@ -122,18 +123,21 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     console.log(history)
     socket.to(room).broadcast.emit('chat-message', { message: message, name: rooms[room].users[socket.id] })
   })
+
   socket.on('disconnect', () => {
-    getUserRooms(socket).forEach(room => {
-      socket.to(room).broadcast.emit('user-disconnected', rooms[room].users[socket.id])
-      delete rooms[room].users[socket.id]
-      
-  })
   for(let i = 0;i<userlist.length;i++){
     if(getClientID.id == userlist[i].id){
+      name = userlist[i].name
       userlist.splice(i, 1)
     }
   }
-  })
+  
+  getUserRooms(socket).forEach(room => {
+    delete rooms[room].users[socket.id]
+    socket.to(room).broadcast.emit('user-disconnected', name,userlist)
+    
+})
+})
 })
 
 function getUserRooms(socket) {
