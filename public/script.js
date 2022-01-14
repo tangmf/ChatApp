@@ -87,12 +87,29 @@ document.getElementById('leave-btn').addEventListener('click', () => {
 
 function updateusers(userlist){
   userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name} <button type="button" id=${element.id}>kick</button> <button type="button" id=${element.id}>mute</button></div>`)
+  admin = false
+  for(let i = 0;i<userlist.length;i++){
+    if(userlist[i].id == socket.id && userlist[i].role == 'owner'){
+      admin = true;
     }
-    
-  })
+  }
+  if(admin){
+    userlist.forEach(element => {
+      if(element != null){
+        userContainer.innerHTML += (`<div>${element.name} <button type="button" id=${element.id}>kick</button> <button type="button" id=${element.id}>mute</button></div>`)
+      }
+      
+    })
+  }
+  else{
+    userlist.forEach(element => {
+      if(element != null){
+        userContainer.innerHTML += (`<div>${element.name}</div>`)
+      }
+      
+    })
+  }
+  
 }
 
 
