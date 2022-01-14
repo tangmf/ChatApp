@@ -20,6 +20,11 @@ if (messageForm != null) {
   })
 }
 
+$(document).on('click', 'button', function() {
+  {
+     alert(this.id)
+  }
+})
 socket.on('room-created', room => {
   const roomElement = document.createElement('div')
   roomElement.innerText = room
@@ -84,11 +89,12 @@ function updateusers(userlist){
   userContainer.innerHTML = ""
   userlist.forEach(element => {
     if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
+      userContainer.innerHTML += (`<div>${element.name} <button type="button" id=${element.id}>kick</button> <button type="button" id=${element.id}>mute</button></div>`)
     }
     
   })
 }
+
 
 /*
 // speech recognition
