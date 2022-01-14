@@ -541,6 +541,33 @@ body {
   
 }
 
+/* Illness-about */
+
+.illness-content{
+  text-align: center;
+  background-color:#ccffe2;
+  margin: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chatbot */
 * {
   box-sizing: border-box;
@@ -746,3 +773,5 @@ body {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
+
