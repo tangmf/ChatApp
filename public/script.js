@@ -94,3 +94,4 @@ function updateusers(userlist){
 // speech recognition
 var speechRecognition = window.webkitSpeechRecognition
 
+*/
