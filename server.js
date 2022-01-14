@@ -54,10 +54,6 @@ app.get('/illness_about', (req, res) => {
   res.render('illness_about')
 })
 
-app.get('/dementia', (req, res) => {
-  res.render('mental-illness/dementia')
-})
-
 app.get('/test', (req, res) => {
   res.render('test')
 })
@@ -81,6 +77,15 @@ app.get('/:room', (req, res) => {
   }
   res.render('room', { roomName: req.params.room })
 })
+
+app.post('/predict', function(req,res){
+  text = request.get_json().get("message")
+  response = get_response(text)
+  message = {"answer": response}
+  return jsonify(message)
+})
+
+
 
 server.listen(port)
 const history = []
