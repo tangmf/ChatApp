@@ -8,7 +8,6 @@ const userContainer = document.getElementById('users')
 if (messageForm != null) {
   const name = prompt('What is your name?')
   socket.emit('new-user', roomName, name)
-  userContainer.innerHTML += (`<div> ${name}</div>`)
 
   messageForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -41,38 +40,20 @@ socket.on('msg', (history, userlist) => {
   history.forEach(element => {
     appendMessage(`${element[0]}: ${element[1]}`)
   })
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
   
+  updateusers(userlist)
   appendMessage('You joined')
 })
 
-socket.on('user-connected', name => {
+socket.on('user-connected', (name,userlist) => {
   appendMessage(`${name} connected`)
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
+  updateusers(userlist)
 })
 
 
-socket.on('user-disconnected', name => {
+socket.on('user-disconnected', (name,userlist) => {
   appendMessage(`${name} disconnected`)
-  userContainer.innerHTML = ""
-  userlist.forEach(element => {
-    if(element != null){
-      userContainer.innerHTML += (`<div>${element.name}</div>`)
-    }
-    
-  })
+  updateusers(userlist)
 })
 
 function appendMessage(message) {
@@ -98,6 +79,16 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+
+function updateusers(userlist){
+  userContainer.innerHTML = ""
+  userlist.forEach(element => {
+    if(element != null){
+      userContainer.innerHTML += (`<div>${element.name}</div>`)
+    }
+    
+  })
+}
 
 /*
 // speech recognition
