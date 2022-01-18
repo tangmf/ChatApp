@@ -22,7 +22,13 @@ if (messageForm != null) {
 
 $(document).on('click', 'button', function() {
   {
-     alert(this.id)
+     if(this.id.split("/")[0] == "mute"){
+       alert("mute")
+     }
+     else if(this.id.split("/")[0] == "kick"){
+      alert("kick")
+    }
+
   }
 })
 socket.on('room-created', room => {
@@ -85,7 +91,7 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   }
 });
 
-function updateusers(userlist){
+function updateusers(userlist,otheruserlist){
   userContainer.innerHTML = ""
   admin = false
   for(let i = 0;i<userlist.length;i++){
@@ -96,7 +102,7 @@ function updateusers(userlist){
   if(admin){
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name} <button type="button" id=${element.id}>kick</button> <button type="button" id=${element.id}>mute</button></div>`)
+        userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> <button type="button" id="mute/${element.id}">mute</button></div>`)
       }
       
     })
@@ -110,6 +116,16 @@ function updateusers(userlist){
     })
   }
   
+}
+
+function kick(userid,userlist){
+  for(let i = 0;i<userlist.length;i++){
+    // If given socket id is exist in list of all sockets, kill it
+    if(userlist[i].id === userid)
+    {
+        socket.disconnect(true)
+    }
+  }
 }
 
 
