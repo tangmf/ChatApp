@@ -124,7 +124,7 @@ function updateusers(userlist){
   if(admin){
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> <button type="button" id="mute/${element.id}">mute</button></div>`)
+        userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
       }
       
     })
