@@ -123,6 +123,13 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     console.log(history)
     socket.to(room).broadcast.emit('chat-message', { message: message, name: rooms[room].users[socket.id] })
   })
+  socket.on('kick', (socketId) => {
+    io.sockets.sockets[socketId].disconnect(true)
+})
+
+socket.on('kick helper', () => { // now this socket obj is the user getting kicked
+    socket.disconnect(true); 
+})
 
   socket.on('disconnect', () => {
   for(let i = 0;i<userlist.length;i++){
@@ -138,6 +145,7 @@ var getClientID = client.find(e => (e.id === socket.client.id))
     
 })
 })
+
 })
 
 function getUserRooms(socket) {

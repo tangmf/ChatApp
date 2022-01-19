@@ -27,6 +27,12 @@ $(document).on('click', 'button', function() {
      }
      else if(this.id.split("/")[0] == "kick"){
       alert("kick")
+      socketId = this.id.split("/")[1]
+      socket.emit('kick', socketId); // sent by the host
+
+      socket.on('kick helper', () => { // sent by the user getting kicked
+          socket.emit('kick helper');
+      })
     }
 
   }
