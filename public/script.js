@@ -4,7 +4,7 @@ const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('chat-form')
 const messageInput = document.getElementById('msg')
 const userContainer = document.getElementById('users')
-
+let setup = false
 if (messageForm != null) {
   const name = prompt('What is your name?')
   socket.emit('new-user', roomName, name)
@@ -20,6 +20,7 @@ if (messageForm != null) {
   })
 }
 
+
 $(document).on('click', 'button', function() {
   {
      if(this.id.split("/")[0] == "mute"){
@@ -28,15 +29,15 @@ $(document).on('click', 'button', function() {
      else if(this.id.split("/")[0] == "kick"){
       alert("kick")
       socketId = this.id.split("/")[1]
-      socket.emit('kick', socketId); // sent by the host
-
-      socket.on('kick helper', () => { // sent by the user getting kicked
-          socket.emit('kick helper');
-      })
+      socket.emit('kick', (socketId)); // sent by the host
+      console.log(socket.id + " / " + socketId)
     }
 
   }
 })
+
+
+
 socket.on('room-created', room => {
   const roomElement = document.createElement('div')
   roomElement.innerText = room
@@ -60,6 +61,15 @@ socket.on('msg', (history, userlist) => {
   
   updateusers(userlist)
   appendMessage('You joined')
+  setup = true
+})
+
+socket.on('kick helper', (socketId) => { // now this socket obj is the user getting kicked
+  console.log("kick helper")
+  if(socket.id == socketId){
+    window.location.href = '/'
+    alert("you have been kicked")
+  }
 })
 
 socket.on('user-connected', (name,userlist) => {
@@ -97,7 +107,7 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   }
 });
 
-function updateusers(userlist,otheruserlist){
+function updateusers(userlist){
   userContainer.innerHTML = ""
   admin = false
   for(let i = 0;i<userlist.length;i++){
