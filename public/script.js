@@ -20,6 +20,12 @@ if (messageForm != null) {
   })
 }
 
+window.setInterval( function(){
+  if (socket.connected == false && setup == true) {
+     window.location.href = '/'
+     alert("You have been kicked")
+  }
+},10)
 
 $(document).on('click', 'button', function() {
   {
