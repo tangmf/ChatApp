@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/search', (req, res) => {
-  res.render('search', { rooms: rooms })
+app.get('/rooms', (req, res) => {
+  res.render('rooms', { rooms: rooms })
 })
 
 app.get('/createroom', (req, res) => {
@@ -44,6 +44,14 @@ app.get('/feed',(req,res) =>{
 })
 app.get('/community', (req, res) => {
   res.render('community')
+})
+
+app.get('/news', (req, res) => {
+  res.render('news')
+})
+
+app.get('/learn', (req, res) => {
+  res.render('learn')
 })
 
 app.get('/illness', (req, res) => {

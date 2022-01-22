@@ -1,143 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chat App</title>
-  <script>
-    const roomName = "<%= roomName %>"
-  </script>
-  <script defer src="socket.io/socket.io.js"></script>
-  <script defer src="script.js"></script>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/Styles/normalize.css">
-  <link rel="stylesheet" href="/Styles/chat.css">
-  <link rel="stylesheet" href="/Styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Nav bar -->
-  <nav style="position: sticky; z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-light">
-    <a class="navbar-brand" href="/index"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto navbar-brand">
-        <li class="nav-item">
-          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/search">Rooms</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/feed">News</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Learn
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/illness">About mental illnesses</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">About hobbies</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Room</title>
+    <link rel="stylesheet" href="Styles/nicepage.css" media="screen">
+<link rel="stylesheet" href="Styles/Room.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script defer src="socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    <script>
+      const roomName = "<%= roomName %>"
+    </script>
+  
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"logo": "images/logo1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Room">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-palette-1-light-1 u-header" id="sec-975e"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1080" data-image-height="1080">
+          <img src="images/logo1.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <h3 class="u-headline u-text u-text-default u-text-1">
+          <a href="/">PenguChat</a>
+        </h3>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-border-radius u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-text-shadow u-custom-text-shadow-blur u-custom-text-shadow-color u-custom-text-shadow-transparency u-custom-text-shadow-x u-custom-text-shadow-y u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
           </div>
-        </li>
-      </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
-      <ul class="navbar-nav ml-auto navbar-brand">
-        <li>
-          <a class="nav-link" href="/community">Community</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="chat-container">
-    <header class="chat-header">
-      <h1><i class="fas fa-smile"></i>Sharing session</h1>
-      <a id="leave-btn" class="btn" href="search.html">Leave Room</a>
-    </header>
-    <main class="chat-main">
-      <div class="chat-sidebar">
-        <h3><i class="fas fa-comments"></i> Room Name:</h3>
-        <h2 id="room-name">
-          <%= roomName %>
-        </h2>
-        <h3><i class="fas fa-users"></i> Users</h3>
-        <ul id="users"></ul>
-      </div>
-      <div id="chat-messages"></div>
-    </main>
-    <div class="chat-form-container">
-      <form id="chat-form">
-        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
-  <!-- split-->
-
-  <!--
-  <section class="chat-container">
-      <main class="chat-main">
-        <div class="chat-sidebar">
-          <h3><i class="fas fa-comments"></i>Welcome!</h3>
-          <h2 id="room-name">Chat room: <%= roomName %></h2>
-          <h3><i class="fas fa-users"></i> Users</h3>
-          <ul id="users"></ul>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Home.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="About.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">About</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Rooms.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Rooms</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="blog/blog.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Blog</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Learn.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Learn</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Community.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Community</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rooms.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Rooms</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="blog/blog.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Blog</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Learn.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Learn</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Community.html" style="padding: 10px 20px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Community</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-71a3">
+      <div class="u-clearfix u-sheet u-sheet-1"></div>
+      <div class="chat-container">
+        <header class="chat-header">
+          <h1><i class="fas fa-smile"></i>Sharing session</h1>
+          <a id="leave-btn" class="btn" href="search.html">Leave Room</a>
+        </header>
+        <main class="chat-main">
+          <div class="chat-sidebar">
+            <h3><i class="fas fa-comments"></i> Room Name:</h3>
+            <h2 id="room-name">
+              <%= roomName %>
+            </h2>
+            <h3><i class="fas fa-users"></i> Users</h3>
+            <ul id="users"></ul>
+          </div>
+          <div id="chat-messages"></div>
+        </main>
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+            <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+          </form>
         </div>
-        <div id="message-container">
-        </div>
-      </main>
-      <div class="chat-form-container">
-        <form id="send-container">
-          <input
-            id="message-input"
-            type="text"
-            placeholder="Enter Message"
-            required
-            autocomplete="off"
-          />
-          <button type="submit" id="send-button"><i class="fas fa-paper-plane"></i> Send</button>
-        </form>
       </div>
-  </section>
-  -->
-  <!-- Bootstrap js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-</body>
-
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-761d"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">2021 PFD Assignment<br>
+          <br>
+        </p>
+      </div></footer>
+  </body>
 </html>
