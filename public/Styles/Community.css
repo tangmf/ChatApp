@@ -29,7 +29,7 @@
 .u-section-1 .u-image-1 {
   width: 290px;
   height: 290px;
-  background-image: url("images/mascot2.png");
+  background-image: url("../Images/mascot2.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -141,7 +141,7 @@
 .u-section-2 .u-image-1 {
   width: 174px;
   height: 174px;
-  background-image: url("images/ddddddd.jpg");
+  background-image: url("../Images/ddddddd.jpg");
   background-position: 50% 50%;
   margin: 27px 403px 0 27px;
 }
@@ -176,7 +176,7 @@
 .u-section-2 .u-image-2 {
   width: 174px;
   height: 174px;
-  background-image: url("images/3.jpg");
+  background-image: url("../Images/3.jpg");
   background-position: 50% 50%;
   margin: 27px 417px 0 40px;
 }
@@ -211,7 +211,7 @@
 .u-section-2 .u-image-3 {
   width: 174px;
   height: 174px;
-  background-image: url("images/1.jpg");
+  background-image: url("../Images/1.jpg");
   background-position: 50% 50%;
   margin: 27px auto 0 21px;
 }
