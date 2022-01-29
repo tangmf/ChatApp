@@ -37,7 +37,7 @@ $(document).on('click', 'button', function() {
      else if(this.id.split("/")[0] == "kick"){
       alert("kick")
       socketId = this.id.split("/")[1]
-      socket.emit('kick', (socketId)); // sent by the host
+      socket.emit('kick', socketId); // sent by the host
       console.log(socket.id + " / " + socketId)
     }
 
