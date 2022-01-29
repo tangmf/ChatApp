@@ -1,118 +1,94 @@
-<!doctype html>
-<html lang="en">
-
-<!-- Bootstrap code source: https://repl.it/@mingfeng/wk08-simple-bootstrap#script.js -->
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="Styles/normalize.css">
-  <link rel="stylesheet" href="Styles/style.css">
-  <link rel="stylesheet" href="Styles/quiz.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <title>ChatApp</title>
-</head>
-
-<body>
-
-
-  <!-- Nav bar -->
-  <nav style="position: sticky; z-index: 3;" class="navbar navbar-expand-lg navbar-custom navbar-light">
-    <a class="navbar-brand" href="/index"><img src="/Images/ribbon.png" alt="icon" style="width:60px;"> Chatapp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto navbar-brand">
-        <li class="nav-item">
-          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/search">Rooms</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/feed">News</a>
-        </li>
-        <li class="nav-item dropdown active">
-          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Learn
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/illness">About mental illnesses</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">About hobbies</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="Styles/nicepage.css" media="screen">
+    <link rel="stylesheet" href="Styles/Quiz.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"logo": "images/logo1.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Quiz">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-palette-1-light-1 u-header" id="sec-975e"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1080" data-image-height="1080">
+          <img src="images/logo1.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <h3 class="u-headline u-text u-text-default u-text-1">
+          <a href="/">PenguChat</a>
+        </h3>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-border-radius u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-text-shadow u-custom-text-shadow-blur u-custom-text-shadow-color u-custom-text-shadow-transparency u-custom-text-shadow-x u-custom-text-shadow-y u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
           </div>
-        </li>
-      </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
-      <ul class="navbar-nav ml-auto navbar-brand">
-        <li>
-          <a class="nav-link" href="/community">Community</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div id="home" class="flex-column flex-center">
-      <h2><b>Test your Mental Health Awareness</b></h2>
-      <br>
-      <div id="quiz_instructions">
-        <p>Based on findings from the Singapore Mental Health Study conducted by the Insitute of Mental Health
-          in 2016, 1 in 7 people in Singapore has experienced a mental health problem at some point in their lives.
-          Ill mental health can significantly impact people's day to day lives, particularly in the workplace,
-          because so many people still struggle to fully grasp the topic of mental health and understand how to
-          help those with mental health issues feel encouraged and supported in their role.</p>
-        <p><b>Try our quick quiz below to test your mental health awareness</b></p>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Home.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="About.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">About</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Rooms.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Rooms</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="blog/blog.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Blog</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Learn.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Learn</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="Community.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Community</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-white u-text-white" href="News.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">News</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Rooms.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Rooms</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="blog/blog.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Blog</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Learn.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Learn</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Community.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">Community</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="News.html" style="padding: 10px 0px; text-shadow: 2px -2px 8px rgba(128,128,128,1);">News</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-left u-clearfix u-palette-1-base u-typography-custom-page-typography-8--Introduction u-section-1" src="" id="sec-4038">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/penguquiz.png" alt="" data-image-width="1080" data-image-height="1080">
+        <h1 class="u-text u-text-default u-text-white u-text-1">Ready to take the quiz?</h1>
+        <p class="u-text u-text-2"> Based on findings from the Singapore Mental Health Study conducted by the Insitute of Mental Health in 2016, 1 in 7 people in Singapore has experienced a mental health problem at some point in their lives.&nbsp;<br>
+          <br>Ill mental health can significantly impact people's day to day lives, particularly in the workplace, because so many people still struggle to fully grasp the topic of mental health and understand how to help those with mental health issues feel encouraged and supported in their role.&nbsp;<br>
+          <br>
+          <br><b>Try our quick quiz below to test your mental health awareness</b>
+        </p>
+        <div class="u-border-4 u-border-palette-3-base u-line u-line-horizontal u-line-1"></div>
+        <h3 class="u-text u-text-body-alt-color u-text-default u-text-3">10 Questions</h3>
+        <a href="/game" class="u-btn u-btn-round u-button-style u-custom u-radius-50 u-white u-btn-1">Start now</a>
       </div>
-      <a href="/game" class="btn container-h">Start</a>
-
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
-  <!-- Bootstrap js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-</body>
-
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-761d"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">2021 PFD Assignment<br>
+          <br>
+        </p>
+      </div></footer>
+  </body>
 </html>

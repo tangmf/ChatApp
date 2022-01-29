@@ -47,7 +47,6 @@
   min-height: 416px;
   margin-top: 36px;
   margin-bottom: 0;
-  height: auto;
 }
 
 .u-section-1 .u-carousel-indicators-1 {
@@ -138,6 +137,33 @@
   margin: 60px auto 0;
 }
 
+.u-section-1 .u-container-layout-5 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-6 {
+  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 21px 31px 0;
+}
+
+.u-section-1 .u-image-5 {
+  width: 152px;
+  height: 152px;
+  margin: 19px auto 0;
+}
+
+.u-section-1 .u-btn-4 {
+  background-image: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  border-style: none;
+  font-weight: 700;
+  margin: 60px auto 0;
+}
+
 .u-section-1 .u-carousel-control-1 {
   width: 50px;
   height: 50px;
@@ -153,13 +179,13 @@
   right: 0;
 }
 
-.u-section-1 .u-image-5 {
+.u-section-1 .u-image-6 {
   min-height: 653px;
-  background-image: url(../images/mascot2.png);
+  background-image: url("images/mascot2.png");
   background-position: 50% 50%;
 }
 
-.u-section-1 .u-container-layout-5 {
+.u-section-1 .u-container-layout-6 {
   padding: 30px;
 }
 
@@ -185,6 +211,10 @@
   .u-section-1 .u-text-2 {
     margin-left: 1px;
     margin-right: 0;
+  }
+
+  .u-section-1 .u-slider-1 {
+    height: auto;
   }
 
   .u-section-1 .u-text-3 {
@@ -214,7 +244,16 @@
     background-position: 50% 50%;
   }
 
+  .u-section-1 .u-text-6 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .u-section-1 .u-image-5 {
+    background-position: 50% 50%;
+  }
+
+  .u-section-1 .u-image-6 {
     min-height: 491px;
   }
 }
@@ -247,7 +286,7 @@
     margin-left: 0;
   }
 
-  .u-section-1 .u-image-5 {
+  .u-section-1 .u-image-6 {
     min-height: 388px;
   }
 }
@@ -281,12 +320,17 @@
     padding-right: 10px;
   }
 
-  .u-section-1 .u-image-5 {
+  .u-section-1 .u-container-layout-5 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-image-6 {
     background-position: 0% 50%;
     min-height: 546px;
   }
 
-  .u-section-1 .u-container-layout-5 {
+  .u-section-1 .u-container-layout-6 {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -306,7 +350,7 @@
     font-size: 2.25rem;
   }
 
-  .u-section-1 .u-image-5 {
+  .u-section-1 .u-image-6 {
     min-height: 344px;
   }
 } .u-section-2 {
@@ -574,7 +618,6 @@
   min-height: 258px;
   margin-top: -9px;
   margin-bottom: 0;
-  height: auto;
 }
 
 .u-section-3 .u-container-layout-4 {
@@ -617,10 +660,6 @@
 
   .u-section-3 .u-layout-cell-3 {
     min-height: 805px;
-  }
-
-  .u-section-3 .u-group-1 {
-    height: auto;
   }
 }
 
