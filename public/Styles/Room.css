@@ -84,6 +84,15 @@ a {
 	padding: 10px 0;
 }
 
+#msg{
+  position: relative;
+  width: 70%;
+  left:10%; 
+  top:-50px;
+  color: black;
+  margin: 16px 8px 0 auto;
+}
+
 #chat-messages {
 	padding: 30px;
 	max-height: 500px;
@@ -296,7 +305,8 @@ a {
 }
 
 .u-section-1 .u-text-6 {
-  margin: -36px 138px 0 119px;
+  width: 70%;
+  margin: -50px 138px 0 119px;
 }
 
 @media (max-width: 1199px) {

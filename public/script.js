@@ -4,6 +4,7 @@ const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('chat-form')
 const messageInput = document.getElementById('msg')
 const userContainer = document.getElementById('users')
+const yournameContainer = document.getElementById('your-name')
 let setup = false
 if (messageForm != null) {
   const name = prompt('What is your name?')
@@ -18,6 +19,7 @@ if (messageForm != null) {
     e.target.elements.msg.value = ''
     e.target.elements.msg.focus()
   })
+  yournameContainer.innerHTML = "You: " + name;
 }
 
 window.setInterval( function(){
