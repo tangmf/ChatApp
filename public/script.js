@@ -124,7 +124,14 @@ function updateusers(userlist){
   if(admin){
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
+        //userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
+        userContainer.innerHTML += (`<div class="u-container-style u-expanded-width u-group u-palette-1-base u-radius-10 u-shape-round u-group-2">
+        <div class="u-container-layout u-container-layout-4">
+          <button id="kick/${element.id} href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;
+          </button>
+          <p class="u-text u-text-default u-text-3">${element.name}</p>
+        </div>
+      </div>`)
       }
       
     })
@@ -132,7 +139,14 @@ function updateusers(userlist){
   else{
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name}</div>`)
+        //userContainer.innerHTML += (`<div>${element.name}</div>`)
+        userContainer.innerHTML += (`<div class="u-container-style u-expanded-width u-group u-palette-1-base u-radius-10 u-shape-round u-group-2">
+        <div class="u-container-layout u-container-layout-4">
+          <button  href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2"><span class="u-file-icon u-icon u-text-white u-icon-1"></span>&nbsp;
+          </button>
+          <p class="u-text u-text-default u-text-3">${element.name}</p>
+        </div>
+      </div>`)
       }
       
     })
