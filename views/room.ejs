@@ -72,64 +72,51 @@
       </div>
     </nav>
   </div></header>
-<section class="u-clearfix u-valign-middle u-section-1" id="sec-71a3">
-  <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-palette-1-base u-layout-wrap-1">
-    <div class="u-layout">
-      <div class="u-layout-col">
-        <div class="u-size-40">
-          <div class="u-layout-row">
-            <div class="u-container-style u-layout-cell u-palette-1-base u-size-60 u-layout-cell-1">
-              <div class="u-container-layout u-container-layout-1">
-                <a href="/rooms" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-light-3 u-radius-6 u-btn-1">Leave Room</a>
-                <h1 class="u-text u-text-default u-text-1"><%= roomName %></h1>
+  <section class="u-clearfix u-palette-1-base u-section-1" id="sec-f1fb">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-container-style u-expanded-width u-group u-palette-1-base u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <a href="/rooms" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-light-3 u-radius-6 u-btn-1">Leave Room</a>
+          <h1 class="u-text u-text-default u-text-1"><%= roomName %></h1>
+        </div>
+      </div>
+      <div class="u-container-style u-group u-shape-rectangle u-group-2">
+        <div class="u-container-layout u-container-layout-2">
+          <div class="u-container-style u-group u-palette-1-light-3 u-shape-rectangle u-group-3">
+            <div id="chat-messages" class="u-container-layout u-container-layout-3">
+
+            </div>
+          </div>
+          <div class="u-container-style u-group u-palette-1-dark-1 u-shape-rectangle u-group-5">
+            <div class="u-container-layout u-container-layout-5">
+            <form id="chat-form">
+              <button class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3"></i> Send</button>
+              <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+              
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-container-style u-group u-shape-rectangle u-group-6">
+        <div class="u-container-layout u-container-layout-6">
+          <h2 class="u-text u-text-default u-text-4">Users</h2>
+          <div class="u-container-style u-group u-palette-1-light-3 u-radius-10 u-shape-round u-group-7">
+            <div class="u-container-layout u-container-layout-7">
+              <div id = "users">
+
               </div>
             </div>
           </div>
-        </div>
-        <div class="u-size-20">
-          <div class="u-layout-row">
-            <div class="u-container-style u-layout-cell u-palette-1-base u-size-18 u-layout-cell-2">
-              <div class="u-container-layout u-container-layout-2">
-                <h2 class="u-text u-text-default u-text-2">Users</h2>
-
-                
-                <div class="u-image u-image-circle u-preserve-proportions u-image-1" alt="" data-image-width="1080" data-image-height="1080"></div>
-                <div class="u-container-style u-group u-palette-1-light-3 u-radius-10 u-shape-round u-group-1">
-                  <div id="users" class="u-container-layout u-valign-top u-container-layout-3">
-                    
-                  </div>
-                </div>
-                <div class="u-container-style u-group u-palette-1-dark-1 u-radius-10 u-shape-round u-group-3">
-                  <div class="u-container-layout u-container-layout-5">
-                    <p id = "your-name" class="u-text u-text-default u-text-4">Your name</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-container-style u-layout-cell u-palette-1-base u-size-42 u-layout-cell-3">
-              <div class="u-container-layout u-container-layout-6 chat-container">
-                <div class="u-container-style u-expanded-width u-group u-palette-1-light-3 u-shape-rectangle u-group-4">
-                  <div id="chat-messages" class="u-container-layout u-container-layout-7">
-                    
-                  </div>
-                </div>
-                <div class="u-container-style u-expanded-width u-group u-palette-1-dark-1 u-shape-rectangle u-group-6">
-                  <div class="u-container-layout u-container-layout-9">
-                    <form id="chat-form">
-                      <button class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3"></i> Send</button>
-                      <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
-                      
-                    </form>
-                  </div>
-                </div>
-              </div>
+          <div class="u-container-style u-group u-palette-1-dark-1 u-radius-10 u-shape-round u-group-9">
+            <div class="u-container-layout u-container-layout-9">
+              <p id = "your-name" class="u-text u-text-default u-text-6">Your name</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-761d"><div class="u-clearfix u-sheet u-sheet-1">
