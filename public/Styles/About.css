@@ -399,7 +399,7 @@
 
 .u-section-3-1 .u-image-1 {
   min-height: 510px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../Images/4287352.png");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../Images/chatting.png");
   background-position: 50% 50%;
   background-size: 140%;
 }
@@ -516,9 +516,9 @@
 
 .u-section-3-2 .u-image-1 {
   min-height: 510px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../Images/discordbot2.png");
-  background-position: 0% 34.85%;
-  background-size: auto 140%;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../Images/chatting.png");
+  background-position: 50% 50%;
+  background-size: 140%;
 }
 
 .u-section-3-2 .u-container-layout-1 {
