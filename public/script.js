@@ -151,8 +151,3 @@ function kick(userid,userlist){
 }
 
 
-/*
-// speech recognition
-var speechRecognition = window.webkitSpeechRecognition
-
-*/

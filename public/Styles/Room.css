@@ -127,3 +127,10 @@ a {
 	flex: 1;
 }
 
+#mic-icon{
+	display: block;
+	/* color: #d9534f; */
+	height: 40px;
+	width: 50px;
+	z-index: 2;
+}

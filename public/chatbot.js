@@ -1,3 +1,4 @@
+
 class Chatbox {
     constructor() {
         this.args = {
@@ -42,11 +43,11 @@ class Chatbox {
         if (text1 === "") {
             return;
         }
-
+        
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('/predict', {
+        fetch('/test2', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             headers: {
