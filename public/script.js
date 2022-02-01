@@ -4,6 +4,7 @@ const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('chat-form')
 const messageInput = document.getElementById('msg')
 const userContainer = document.getElementById('users')
+const yournameContainer = document.getElementById('your-name')
 let setup = false
 if (messageForm != null) {
   const name = prompt('What is your name?')
@@ -18,6 +19,7 @@ if (messageForm != null) {
     e.target.elements.msg.value = ''
     e.target.elements.msg.focus()
   })
+  yournameContainer.innerHTML = "You: " + name;
 }
 
 window.setInterval( function(){
@@ -35,7 +37,7 @@ $(document).on('click', 'button', function() {
      else if(this.id.split("/")[0] == "kick"){
       alert("kick")
       socketId = this.id.split("/")[1]
-      socket.emit('kick', (socketId)); // sent by the host
+      socket.emit('kick', socketId); // sent by the host
       console.log(socket.id + " / " + socketId)
     }
 
@@ -124,7 +126,21 @@ function updateusers(userlist){
   if(admin){
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
+        //userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
+        /*
+        userContainer.innerHTML += (`<div class="u-container-style u-expanded-width u-group u-palette-1-base u-radius-10 u-shape-round u-group-2">
+        <div class="u-container-layout u-container-layout-4">
+          <button id="kick/${element.id} href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;
+          </button>
+          <p class="u-text u-text-default u-text-3">${element.name}</p>
+        </div>
+      </div>`)
+      */
+      userContainer.innerHTML += (`<div class="u-container-style u-group u-palette-1-base u-radius-10 u-shape-round u-group-8"><div class="u-container-layout u-container-layout-8">
+      <button id="kick/${element.id} href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;Kick
+      </button>
+      <p class="u-text u-text-default u-text-5">${element.name}</p>
+    </div></div>`)
       }
       
     })
@@ -132,7 +148,12 @@ function updateusers(userlist){
   else{
     userlist.forEach(element => {
       if(element != null){
-        userContainer.innerHTML += (`<div>${element.name}</div>`)
+        //userContainer.innerHTML += (`<div>${element.name}</div>`)
+        userContainer.innerHTML += (`<div class="u-container-style u-group u-palette-1-base u-radius-10 u-shape-round u-group-8"><div class="u-container-layout u-container-layout-8">
+      <button  href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img ></span>&nbsp;
+      </button>
+      <p class="u-text u-text-default u-text-5">${element.name}</p>
+    </div></div>`)
       }
       
     })
