@@ -192,6 +192,13 @@ a {
   overflow-y: scroll;
 }
 
+#mic-icon{
+	display: block;
+	/* color: #d9534f; */
+	height: 40px;
+	width: 50px;
+	z-index: 2;
+}
 .u-section-1 .u-group-8 {
   min-height: 44px;
   height: auto;

@@ -63,7 +63,7 @@ app.get('/illness_about', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-  res.render('test')
+  res.render('python')
 })
 app.use(express.static("images"));
 
