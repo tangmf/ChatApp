@@ -192,12 +192,13 @@ a {
   overflow-y: scroll;
 }
 
-#mic-icon{
+#start-btn{
 	display: block;
 	/* color: #d9534f; */
 	height: 40px;
 	width: 50px;
 	z-index: 2;
+  color: black;
 }
 .u-section-1 .u-group-8 {
   min-height: 44px;
