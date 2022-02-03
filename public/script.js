@@ -35,7 +35,7 @@ $(document).on('click', 'button', function() {
        alert("mute")
      }
      else if(this.id.split("/")[0] == "kick"){
-      alert("kick" +  this.id.split("/")[1])
+      alert("user has been kicked")
       socketId = this.id.split("/")[1]
       socket.emit('kick', (socketId)); // sent by the host
     }
