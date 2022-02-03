@@ -124,7 +124,7 @@ function updateusers(userlist){
   }
   if(admin){
     userlist.forEach(element => {
-      if(element != null){
+      if(element != null && element.id != socket.id){
         //userContainer.innerHTML += (`<div>${element.name} <button type="button" id="kick/${element.id}">kick</button> </div>`)
         /*
         userContainer.innerHTML += (`<div class="u-container-style u-expanded-width u-group u-palette-1-base u-radius-10 u-shape-round u-group-2">
@@ -137,6 +137,12 @@ function updateusers(userlist){
       */
       userContainer.innerHTML += (`<div class="u-container-style u-group u-palette-1-base u-radius-10 u-shape-round u-group-8"><div class="u-container-layout u-container-layout-8">
       <button id="kick/${element.id}" href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;Kick
+      </button>
+      <p class="u-text u-text-default u-text-5">${element.name}</p>
+    </div></div>`)
+      }else{
+        userContainer.innerHTML += (`<div class="u-container-style u-group u-palette-1-base u-radius-10 u-shape-round u-group-8"><div class="u-container-layout u-container-layout-8">
+      <button  href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img ></span>&nbsp;
       </button>
       <p class="u-text u-text-default u-text-5">${element.name}</p>
     </div></div>`)
