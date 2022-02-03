@@ -35,10 +35,9 @@ $(document).on('click', 'button', function() {
        alert("mute")
      }
      else if(this.id.split("/")[0] == "kick"){
-      alert("kick")
+      alert("kick" +  this.id.split("/")[1])
       socketId = this.id.split("/")[1]
-      socket.emit('kick', socketId); // sent by the host
-      console.log(socket.id + " / " + socketId)
+      socket.emit('kick', (socketId)); // sent by the host
     }
 
   }
@@ -137,7 +136,7 @@ function updateusers(userlist){
       </div>`)
       */
       userContainer.innerHTML += (`<div class="u-container-style u-group u-palette-1-base u-radius-10 u-shape-round u-group-8"><div class="u-container-layout u-container-layout-8">
-      <button id="kick/${element.id} href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;Kick
+      <button id="kick/${element.id}" href="https://nicepage.com/k/interactive-website-templates" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="images/1.png" alt=""></span>&nbsp;Kick
       </button>
       <p class="u-text u-text-default u-text-5">${element.name}</p>
     </div></div>`)
