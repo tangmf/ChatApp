@@ -53,6 +53,7 @@ a {
 
 #chat-messages .message {
 	padding: 10px;
+  margin: 15px;
 	margin-bottom: 15px;
 	background-color: lightsteelblue;
 	border-radius: 5px;
